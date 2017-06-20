@@ -20,10 +20,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::group(['middleware'=>'cors'], function (){
-    //rota get chamada 'products' apontar para 'Api\ProductsController' no metodo index
-    Route::get('products', 'Api\ProductsController@index');
-                    //apontando para product | a action do controller será show criada em app\Http\Api\ProductsController.php
-    Route::get('products/{product}', 'Api\ProductsController@show');
+    Route::post('login', 'Api\AuthenticateController@authenticate');
+
+    Route::group(['middleware' => 'jwt.auth'], function(){
+        //rota get chamada 'products' apontar para 'Api\ProductsController' no metodo index
+        Route::get('products', 'Api\ProductsController@index');
+                        //apontando para product | a action do controller será show criada em app\Http\Api\ProductsController.php
+        Route::get('products/{product}', 'Api\ProductsController@show');
+    });
 });
 
 // Route::get('products', 'Api\ProductsController@index');

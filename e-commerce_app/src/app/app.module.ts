@@ -12,6 +12,9 @@ import {ProductListPage} from "../pages/product-list/product-list";
 
 import { HttpModule } from '@angular/http';
 import {ProductDetailPage} from "../pages/product-detail/product-detail";
+import {LoginPage} from "../pages/login/login";
+import {MyCartPage} from "../pages/my-cart/my-cart";
+import {CheckoutPage} from "../pages/checkout/checkout";
 
 
 
@@ -25,6 +28,10 @@ import {ProductDetailPage} from "../pages/product-detail/product-detail";
     ListPage,
     ProductListPage,
     ProductDetailPage,
+    LoginPage,
+    MyCartPage,
+    CheckoutPage
+
   ],
   imports: [
     BrowserModule,
@@ -38,6 +45,9 @@ import {ProductDetailPage} from "../pages/product-detail/product-detail";
     ListPage,
     ProductListPage,
     ProductDetailPage,
+    LoginPage,
+    MyCartPage,
+    CheckoutPage
   ],
   providers: [
     StatusBar,

@@ -99909,9 +99909,12 @@ var ProductDetailPage = (function () {
     }
     ProductDetailPage.prototype.ionViewDidLoad = function () {
         var _this = this;
+        var headers = new Headers();
+        headers.set('Authorization', "Bearer " + window.localStorage['token']);
+        var requestOptions = new RequestOptions({ headers: headers });
         //adicinando a crase para fazer interpolação da variável id colocando-o na url
         //this.http.get(`http://localhost:8000/api/products/${this.navParams.get('id')}`)
-        this.http.get("http://127.0.0.1:8000/api/products/" + this.navParams.get('id'))
+        this.http.get("http://127.0.0.1:8000/api/products/" + this.navParams.get('id'), requestOptions)
             .toPromise().then(function (response) {
             //caso a tenha sucesso adicione a variavel product[];
             _this.product = response.json();
@@ -99953,8 +99956,12 @@ var ProductListPage = (function () {
     }
     ProductListPage.prototype.ionViewDidLoad = function () {
         var _this = this;
+        var headers = new Headers();
+        headers.set('Authorization', "Bearer " + window.localStorage['token']);
+        //construtor dessa classe é headers
+        var requestOptions = new RequestOptions(headers);
         //this.http.get('http://localhost/api/products')
-        this.http.get('http://127.0.0.1:8000/api/products')
+        this.http.get('http://127.0.0.1:8000/api/products', requestOptions)
             .toPromise().then(function (response) {
             _this.products = response.json();
         });
@@ -99975,6 +99982,88 @@ ProductListPage = __decorate$6([
         Http])
 ], ProductListPage);
 
+var __decorate$8 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$7 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var LoginPage = (function () {
+    function LoginPage(navCtrl, navParams, http) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.user = {
+            email: '',
+            password: ''
+        };
+    }
+    LoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LoginPage');
+    };
+    LoginPage.prototype.login = function () {
+        var _this = this;
+        //fazer uma requisição POST
+        this.http.post('http://localhost:8000/api/login', this.user)
+            .toPromise().then(function (response) {
+            window.localStorage['token'] = response.json().token;
+            _this.navCtrl.setRoot(ProductListPage);
+        });
+    };
+    return LoginPage;
+}());
+LoginPage = __decorate$8([
+    IonicPage(),
+    Component({
+        selector: 'page-login',template:/*ion-inline-start:"C:\wamp64\www\laravel54-ionic2-serie\e-commerce_app\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n        <ion-title>Login</ion-title>\n    </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-list>\n        <ion-item>\n            <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="user.email" required></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required></ion-input>\n        </ion-item>\n        <button ion-button full type="button" (click)="login()">Login</button>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\wamp64\www\laravel54-ionic2-serie\e-commerce_app\src\pages\login\login.html"*/,
+    }),
+    __metadata$7("design:paramtypes", [NavController,
+        NavParams,
+        Http])
+], LoginPage);
+
+var __decorate$9 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$8 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Generated class for the MyCartPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var MyCartPage = (function () {
+    function MyCartPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    MyCartPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyCartPage');
+    };
+    return MyCartPage;
+}());
+MyCartPage = __decorate$9([
+    IonicPage(),
+    Component({
+        selector: 'page-my-cart',template:/*ion-inline-start:"C:\wamp64\www\laravel54-ionic2-serie\e-commerce_app\src\pages\my-cart\my-cart.html"*/'<!--\n  Generated template for the MyCartPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>MyCart</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\wamp64\www\laravel54-ionic2-serie\e-commerce_app\src\pages\my-cart\my-cart.html"*/,
+    }),
+    __metadata$8("design:paramtypes", [NavController, NavParams])
+], MyCartPage);
+
 var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -99989,13 +100078,14 @@ var MyApp = (function () {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
-        this.rootPage = HomePage;
+        this.rootPage = LoginPage;
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
             { title: 'Home', component: HomePage },
             { title: 'List', component: ListPage },
-            { title: 'Produtos', component: ProductListPage }
+            { title: 'Produtos', component: ProductListPage },
+            { title: 'Meu carrinho', component: MyCartPage }
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -100024,6 +100114,39 @@ MyApp = __decorate$1([
     __metadata("design:paramtypes", [Platform, StatusBar, SplashScreen])
 ], MyApp);
 
+var __decorate$10 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$9 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Generated class for the CheckoutPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var CheckoutPage = (function () {
+    function CheckoutPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CheckoutPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CheckoutPage');
+    };
+    return CheckoutPage;
+}());
+CheckoutPage = __decorate$10([
+    IonicPage(),
+    Component({
+        selector: 'page-checkout',template:/*ion-inline-start:"C:\wamp64\www\laravel54-ionic2-serie\e-commerce_app\src\pages\checkout\checkout.html"*/'<!--\n  Generated template for the CheckoutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Checkout</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\wamp64\www\laravel54-ionic2-serie\e-commerce_app\src\pages\checkout\checkout.html"*/,
+    }),
+    __metadata$9("design:paramtypes", [NavController, NavParams])
+], CheckoutPage);
+
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -100043,6 +100166,9 @@ AppModule = __decorate([
             ListPage,
             ProductListPage,
             ProductDetailPage,
+            LoginPage,
+            MyCartPage,
+            CheckoutPage
         ],
         imports: [
             BrowserModule,
@@ -100050,7 +100176,10 @@ AppModule = __decorate([
             IonicModule.forRoot(MyApp, {}, {
                 links: [
                     { loadChildren: '../pages/product-detail/product-detail.module#ProductDetailPageModule', name: 'ProductDetailPage', segment: 'product-detail', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/product-list/product-list.module#ProductListPageModule', name: 'ProductListPage', segment: 'product-list', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/product-list/product-list.module#ProductListPageModule', name: 'ProductListPage', segment: 'product-list', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/my-cart/my-cart.module#MyCartPageModule', name: 'MyCartPage', segment: 'my-cart', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/checkout/checkout.module#CheckoutPageModule', name: 'CheckoutPage', segment: 'checkout', priority: 'low', defaultHistory: [] }
                 ]
             }),
         ],
@@ -100061,6 +100190,9 @@ AppModule = __decorate([
             ListPage,
             ProductListPage,
             ProductDetailPage,
+            LoginPage,
+            MyCartPage,
+            CheckoutPage
         ],
         providers: [
             StatusBar,
