@@ -4,6 +4,8 @@ import {Http} from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 import {ProductListPage} from "../product-list/product-list";
 
+
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,26 +19,28 @@ import {ProductListPage} from "../product-list/product-list";
 })
 export class LoginPage {
 
-    public user = {
-        email: '',
-        password: ''
-    };
+  public user = {
+    email:'',
+    password:''
+  };
 
-  constructor(
-      public navCtrl: NavController,
-      public navParams: NavParams,
-      public http:Http
-   ){ }
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public http:Http
+  )
+  {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
+
   login(){
-    //fazer uma requisição POST
-      this.http.post('http://localhost:8000/api/login',this.user)
-          .toPromise().then((response) =>{
-          window.localStorage['token'] = response.json().token;
-          this.navCtrl.setRoot(ProductListPage)
+      //this.http.post('http://localhost/api/login', this.user)
+      this.http.post('http://localhost/laravel54-ionic2-serie/public/api/login', this.user)
+       .toPromise().then((response) => {
+        window.localStorage['token'] = response.json().token;
+        this.navCtrl.setRoot(ProductListPage)
+      }).catch((response) => {
+         console.log(response)
       });
   }
 }

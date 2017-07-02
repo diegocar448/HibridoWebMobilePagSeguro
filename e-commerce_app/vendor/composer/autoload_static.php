@@ -4,145 +4,115 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1ad77ce40988c29f779dc31d1b85aabd
+class ComposerStaticInitb37a861db938dd1c88673e6927469c73
 {
-    public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
-    );
-
-    public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'Tymon\\JWTAuth\\' => 14,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Util\\' => 22,
-            'Symfony\\Polyfill\\Php56\\' => 23,
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\HttpKernel\\' => 29,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
-            'Symfony\\Component\\Finder\\' => 25,
-            'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\Debug\\' => 24,
-        ),
-        'P' => 
-        array (
-            'Psr\\Log\\' => 8,
-        ),
-        'N' => 
-        array (
-            'Namshi\\JOSE\\' => 12,
-        ),
-        'I' => 
-        array (
-            'Illuminate\\Support\\' => 19,
-            'Illuminate\\Session\\' => 19,
-            'Illuminate\\Http\\' => 16,
-            'Illuminate\\Filesystem\\' => 22,
-            'Illuminate\\Contracts\\' => 21,
-        ),
-        'C' => 
-        array (
-            'Carbon\\' => 7,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Tymon\\JWTAuth\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tymon/jwt-auth/src',
-        ),
-        'Symfony\\Polyfill\\Util\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-util',
-        ),
-        'Symfony\\Polyfill\\Php56\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Component\\Translation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\HttpKernel\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-kernel',
-        ),
-        'Symfony\\Component\\HttpFoundation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
-        ),
-        'Symfony\\Component\\Finder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/finder',
-        ),
-        'Symfony\\Component\\EventDispatcher\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
-        ),
-        'Symfony\\Component\\Debug\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/debug',
-        ),
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'Namshi\\JOSE\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/namshi/jose/src/Namshi/JOSE',
-        ),
-        'Illuminate\\Support\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/support',
-        ),
-        'Illuminate\\Session\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/session',
-        ),
-        'Illuminate\\Http\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/http',
-        ),
-        'Illuminate\\Filesystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/filesystem',
-        ),
-        'Illuminate\\Contracts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/illuminate/contracts',
-        ),
-        'Carbon\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'D' => 
-        array (
-            'Doctrine\\Common\\Inflector\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
-            ),
-        ),
+    public static $classMap = array (
+        'LogPagSeguro' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/log/LogPagSeguro.class.php',
+        'PagSeguroAcceptPaymentMethod' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAcceptPaymentMethod.class.php',
+        'PagSeguroAcceptedPaymentMethods' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAcceptedPaymentMethods.class.php',
+        'PagSeguroAcceptedPayments' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAcceptedPayments.class.php',
+        'PagSeguroAccountCredentials' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAccountCredentials.class.php',
+        'PagSeguroAddress' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAddress.class.php',
+        'PagSeguroApplicationCredentials' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroApplicationCredentials.class.php',
+        'PagSeguroAuthorization' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAuthorization.class.php',
+        'PagSeguroAuthorizationAccount' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAuthorizationAccount.class.php',
+        'PagSeguroAuthorizationParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroAuthorizationParser.class.php',
+        'PagSeguroAuthorizationPermission' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAuthorizationPermission.class.php',
+        'PagSeguroAuthorizationPermissions' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAuthorizationPermissions.class.php',
+        'PagSeguroAuthorizationRequest' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAuthorizationRequest.class.php',
+        'PagSeguroAuthorizationSearchResult' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAuthorizationSearchResult.class.php',
+        'PagSeguroAuthorizationSearchService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroAuthorizationSearchService.class.php',
+        'PagSeguroAuthorizationService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroAuthorizationService.class.php',
+        'PagSeguroAutoloader' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/loader/PagSeguroAutoLoader.class.php',
+        'PagSeguroBilling' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroBilling.class.php',
+        'PagSeguroCancelParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroCancelParser.class.php',
+        'PagSeguroCancelService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroCancelService.class.php',
+        'PagSeguroConfig' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/config/PagSeguroConfig.class.php',
+        'PagSeguroConfigWrapper' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/config/PagSeguroConfigWrapper.php',
+        'PagSeguroConnectionData' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroConnectionData.class.php',
+        'PagSeguroCredentials' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroCredentials.class.php',
+        'PagSeguroCreditCard' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroCreditCard.class.php',
+        'PagSeguroCreditCardCheckout' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroCreditCardCheckout.class.php',
+        'PagSeguroCreditCardHolder' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroCreditCardHolder.class.php',
+        'PagSeguroCurrencies' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroCurrencies.class.php',
+        'PagSeguroDirectPaymentInstallment' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroDirectPaymentInstallment.class.php',
+        'PagSeguroDirectPaymentMethods' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroDirectPaymentMethods.class.php',
+        'PagSeguroDirectPaymentParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroDirectPaymentParser.class.php',
+        'PagSeguroDirectPaymentRequest' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroDirectPaymentRequest.class.php',
+        'PagSeguroDirectPaymentService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroDirectPaymentService.class.php',
+        'PagSeguroDocument' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroDocument.class.php',
+        'PagSeguroDocuments' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroDocuments.class.php',
+        'PagSeguroError' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroError.class.php',
+        'PagSeguroExcludePaymentMethod' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroExcludePaymentMethod.class.php',
+        'PagSeguroHelper' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/helper/PagSeguroHelper.class.php',
+        'PagSeguroHttpConnection' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/utils/PagSeguroHttpConnection.class.php',
+        'PagSeguroHttpStatus' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroHttpStatus.class.php',
+        'PagSeguroInstallment' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroInstallment.class.php',
+        'PagSeguroInstallmentParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroInstallmentParser.class.php',
+        'PagSeguroInstallmentService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroInstallmentService.class.php',
+        'PagSeguroInstallments' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroInstallments.class.php',
+        'PagSeguroItem' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroItem.class.php',
+        'PagSeguroLibrary' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/PagSeguroLibrary.class.php',
+        'PagSeguroMetaData' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroMetaData.class.php',
+        'PagSeguroMetaDataItem' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroMetaDataItem.class.php',
+        'PagSeguroMetaDataItemKeys' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroMetaDataItemKeys.class.php',
+        'PagSeguroNotificationService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroNotificationService.class.php',
+        'PagSeguroNotificationType' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroNotificationType.class.php',
+        'PagSeguroOnlineDebitCheckout' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroOnlineDebitCheckout.class.php',
+        'PagSeguroParameter' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroParameter.class.php',
+        'PagSeguroParameterItem' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroParameterItem.class.php',
+        'PagSeguroParserData' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroParserData.class.php',
+        'PagSeguroPaymentMethod' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethod.class.php',
+        'PagSeguroPaymentMethodCode' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethodCode.class.php',
+        'PagSeguroPaymentMethodConfig' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethodConfig.class.php',
+        'PagSeguroPaymentMethodConfigItem' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethodConfigItem.class.php',
+        'PagSeguroPaymentMethodConfigKeys' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethodConfigKeys.class.php',
+        'PagSeguroPaymentMethodGroups' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethodGroups.class.php',
+        'PagSeguroPaymentMethodName' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroAcceptedPaymentMethodName.class.php',
+        'PagSeguroPaymentMethodType' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMethodType.class.php',
+        'PagSeguroPaymentMode' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentMode.class.php',
+        'PagSeguroPaymentParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroPaymentParser.class.php',
+        'PagSeguroPaymentRequest' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPaymentRequest.class.php',
+        'PagSeguroPaymentService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroPaymentService.class.php',
+        'PagSeguroPhone' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPhone.class.php',
+        'PagSeguroPreApproval' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPreApproval.class.php',
+        'PagSeguroPreApprovalCharge' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPreApprovalCharge.class.php',
+        'PagSeguroPreApprovalParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroPreApprovalParser.class.php',
+        'PagSeguroPreApprovalRequest' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPreApprovalRequest.class.php',
+        'PagSeguroPreApprovalSearchResult' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPreApprovalSearchResult.class.php',
+        'PagSeguroPreApprovalSearchService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroPreApprovalSearchService.class.php',
+        'PagSeguroPreApprovalService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroPreApprovalService.class.php',
+        'PagSeguroPreApprovalStatus' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroPreApprovalStatus.class.php',
+        'PagSeguroRefundParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroRefundParser.class.php',
+        'PagSeguroRefundService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroRefundService.class.php',
+        'PagSeguroRequest' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroRequest.class.php',
+        'PagSeguroResources' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/resources/PagSeguroResources.class.php',
+        'PagSeguroSearchResult' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroSearchResult.class.php',
+        'PagSeguroSender' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroSender.class.php',
+        'PagSeguroSenderDocument' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroSenderDocument.class.php',
+        'PagSeguroServiceException' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/exception/PagSeguroServiceException.class.php',
+        'PagSeguroServiceParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroServiceParser.class.php',
+        'PagSeguroSession' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroSession.class.php',
+        'PagSeguroSessionParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroSessionParser.class.php',
+        'PagSeguroSessionService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroSessionService.class.php',
+        'PagSeguroShipping' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroShipping.class.php',
+        'PagSeguroShippingType' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroShippingType.class.php',
+        'PagSeguroTransaction' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransaction.class.php',
+        'PagSeguroTransactionCancellationSource' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransactionCancellationSource.class.php',
+        'PagSeguroTransactionCreditorFees' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransactionCreditorFees.class.php',
+        'PagSeguroTransactionParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/parser/PagSeguroTransactionParser.class.php',
+        'PagSeguroTransactionSearchResult' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransactionSearchResult.class.php',
+        'PagSeguroTransactionSearchService' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/service/PagSeguroTransactionSearchService.class.php',
+        'PagSeguroTransactionStatus' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransactionStatus.class.php',
+        'PagSeguroTransactionSummary' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransactionSummary.class.php',
+        'PagSeguroTransactionType' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/domain/PagSeguroTransactionType.class.php',
+        'PagSeguroXmlParser' => __DIR__ . '/..' . '/pagseguro/php/source/PagSeguroLibrary/utils/PagSeguroXmlParser.class.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1ad77ce40988c29f779dc31d1b85aabd::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1ad77ce40988c29f779dc31d1b85aabd::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit1ad77ce40988c29f779dc31d1b85aabd::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb37a861db938dd1c88673e6927469c73::$classMap;
 
         }, null, ClassLoader::class);
     }

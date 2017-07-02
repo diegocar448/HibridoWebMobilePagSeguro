@@ -10,16 +10,13 @@ class AuthenticateController extends Controller
 {
     public function authenticate(Request $request)
     {
-        //Fazemos a requisição
-        //Depois pegamos o email e a senha
         // grab credentials from the request
         $credentials = $request->only('email', 'password');
 
         try {
-            //usamos a JWTAuth para pegarmos as credenciais
             // attempt to verify the credentials and create a token for the user
-            if (! $token = \JWTAuth::attempt($credentials)) { //se de certo e retornar o TOKEN vai o terceiro em return..
-            return response()->json(['error' => 'invalid_credentials'], 401);
+            if (! $token = \JWTAuth::attempt($credentials)) {
+                return response()->json(['error' => 'invalid_credentials'], 401);
             }
         } catch (JWTException $e) {
             // something went wrong whilst attempting to encode the token

@@ -10,6 +10,8 @@
         "kris/laravel-form-builder": "^1.11",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "pagseguro/pagseguro-php-sdk": "^3.1",
+        "pagseguro/php": "2.7.1",
         "tymon/jwt-auth": "0.5.*"
     },
     "require-dev": {

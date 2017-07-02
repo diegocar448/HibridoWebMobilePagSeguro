@@ -9,6 +9,7 @@ import {ProductListPage} from "../pages/product-list/product-list";
 import {LoginPage} from "../pages/login/login";
 import {MyCartPage} from "../pages/my-cart/my-cart";
 
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -19,7 +20,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -27,7 +28,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Produtos', component: ProductListPage },
-      { title: 'Meu carrinho', component: MyCartPage}
+      { title: 'Meu carrinho', component: MyCartPage},
+
     ];
 
   }

@@ -12,9 +12,13 @@ import {ProductListPage} from "../pages/product-list/product-list";
 
 import { HttpModule } from '@angular/http';
 import {ProductDetailPage} from "../pages/product-detail/product-detail";
+
 import {LoginPage} from "../pages/login/login";
 import {MyCartPage} from "../pages/my-cart/my-cart";
 import {CheckoutPage} from "../pages/checkout/checkout";
+import { BarwareClient } from '../providers/barware-client/barware-client';
+import { Cart } from '../providers/cart/cart';
+
 
 
 
@@ -30,7 +34,8 @@ import {CheckoutPage} from "../pages/checkout/checkout";
     ProductDetailPage,
     LoginPage,
     MyCartPage,
-    CheckoutPage
+    CheckoutPage,
+
 
   ],
   imports: [
@@ -47,12 +52,19 @@ import {CheckoutPage} from "../pages/checkout/checkout";
     ProductDetailPage,
     LoginPage,
     MyCartPage,
-    CheckoutPage
+    CheckoutPage,
+
+
+
+
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarwareClient,
+    Cart,
   ]
 })
 export class AppModule {}

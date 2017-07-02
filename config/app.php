@@ -1,5 +1,7 @@
 <?php
 
+
+
 return [
 
     /*
@@ -169,7 +171,8 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         \Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
         \Barryvdh\Cors\ServiceProvider::class,
-        \Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -229,9 +232,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'FormBuilder' => \Kris\LaravelFormBuilder\Facades\FormBuilder::class,
-        'JWTAuth' => \Tymon\JWTAuth\Facades\JWTAuth::class,
-        'JWTFactory' => \Tymon\JWTAuth\Facades\JWTFactory::class
+        'JWTAuth'   => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class
 
-],
+    ],
 
 ];

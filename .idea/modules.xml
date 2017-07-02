@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/laravel54-ionic2-serie.iml" filepath="$PROJECT_DIR$/.idea/modules/laravel54-ionic2-serie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/laravel54-ionic2-serie.iml" filepath="$PROJECT_DIR$/.idea/laravel54-ionic2-serie.iml" />
     </modules>
   </component>
 </project>

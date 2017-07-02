@@ -26,14 +26,15 @@ export class ProductListPage {
   )
 
   {}
+  
 
   ionViewDidLoad() {
+    //Agora vamos passar o TOKEN no Header da requisição http (Headers() é uma classe do Angular
     let headers = new Headers();
     headers.set('Authorization', `Bearer ${window.localStorage['token']}`);
-                                            //construtor dessa classe é headers
-    let requestOptions = new RequestOptions(headers)
-    //this.http.get('http://localhost/api/products')
-    this.http.get('http://127.0.0.1:8000/api/products', requestOptions)
+    let requestOptions = new RequestOptions({headers});
+    //this.http.get('http://localhost/api/products', requestOptions)
+    this.http.get('http://localhost/laravel54-ionic2-serie/public/api/products', requestOptions)
         .toPromise().then((response)=>{
       this.products=response.json();
     })
